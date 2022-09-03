@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2016 czy1121
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+
+    <declare-styleable name="Background">
+
+        <!-- 背景色(正常/选中/按下/禁用) -->
+        <attr name="bkBackgroundColor" format="color" />
+        <attr name="bkBackgroundColorSelected" format="color" />
+        <attr name="bkBackgroundColorPressed" format="color" />
+        <attr name="bkBackgroundColorDisabled" format="color" />
+
+        <!-- 描边(颜色/厚度/虚线长度/虚线间隙) -->
+        <attr name="bkStrokeColor" format="color" />
+        <attr name="bkStrokeColorSelected" format="color" />
+        <attr name="bkStrokeColorPressed" format="color" />
+        <attr name="bkStrokeColorDisabled" format="color" />
+        <attr name="bkStrokeWidth" format="dimension" />
+        <attr name="bkStrokeDashWidth" format="dimension" />
+        <attr name="bkStrokeDashGap" format="dimension" />
+
+        <!-- 圆角半径 -->
+        <attr name="bkCornerRadius" format="dimension">
+            <!-- 根据宽高自动计算圆角半径 min(height,width) / 2-->
+            <enum name="auto" value="-1" />
+        </attr>
+        <!-- 圆角位置 -->
+        <attr name="bkCornerPosition" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="topLeft" value="1" />
+            <enum name="topRight" value="2" />
+            <enum name="bottomLeft" value="3" />
+            <enum name="bottomRight" value="4" />
+            <enum name="sideLeft" value="5" />
+            <enum name="sideRight" value="6" />
+            <enum name="sideTop" value="7" />
+            <enum name="sideBottom" value="8" />
+            <enum name="diagonalDownward" value="9" />
+            <enum name="diagonalUpward" value="10" />
+        </attr>
+
+        <!--背景渐变类型-->
+        <attr name="bkGradientType" format="enum">
+            <enum name="linear" value="0" />
+            <enum name="radial" value="1" />
+            <enum name="sweep" value="2" />
+        </attr>
+        <!--渐变中心点X坐标（0-1）-->
+        <attr name="bkGradientCenterX" format="float" />
+        <!--渐变中心点Y坐标（0-1）-->
+        <attr name="bkGradientCenterY" format="float" />
+        <!--渐变半径-->
+        <attr name="bkGradientRadius" format="dimension" />
+        <!--渐变方向-->
+        <attr name="bkGradientOrientation" format="enum">
+            <enum name="TOP_BOTTOM" value="0" />
+            <enum name="TR_BL" value="1" />
+            <enum name="RIGHT_LEFT" value="2" />
+            <enum name="BR_TL" value="3" />
+            <enum name="BOTTOM_TOP" value="4" />
+            <enum name="BL_TR" value="5" />
+            <enum name="LEFT_RIGHT" value="6" />
+            <enum name="TL_BR" value="7" />
+        </attr>
+        <!--渐变颜色-->
+        <attr name="bkGradientColors" format="string" />
+        <!--渐变开始颜色-->
+        <attr name="bkGradientStartColor" format="color" />
+        <!--渐变中心颜色-->
+        <attr name="bkGradientCenterColor" format="color" />
+        <!--渐变结尾颜色-->
+        <attr name="bkGradientEndColor" format="color" />
+
+
+        <!-- 阴影半径 -->
+        <attr name="bkShadowRadius" format="dimension" />
+        <!-- 阴影颜色 -->
+        <attr name="bkShadowColor" format="color" />
+        <!-- 阴影边距 -->
+        <attr name="bkShadowPadding" format="dimension" />
+        <attr name="bkShadowPaddingLeft" format="dimension" />
+        <attr name="bkShadowPaddingTop" format="dimension" />
+        <attr name="bkShadowPaddingRight" format="dimension" />
+        <attr name="bkShadowPaddingBottom" format="dimension" />
+
+        <!-- 内容内边距 -->
+        <attr name="bkContentPadding" format="dimension" />
+        <attr name="bkContentPaddingLeft" format="dimension" />
+        <attr name="bkContentPaddingTop" format="dimension" />
+        <attr name="bkContentPaddingRight" format="dimension" />
+        <attr name="bkContentPaddingBottom" format="dimension" />
+
+
+    </declare-styleable>
+
+
+    <declare-styleable name="BKTextView">
+
+        <!-- background color -->
+        <attr name="bkBackgroundColor" />
+        <attr name="bkBackgroundColorSelected" />
+        <attr name="bkBackgroundColorPressed" />
+        <attr name="bkBackgroundColorDisabled" />
+
+        <!-- stroke -->
+        <attr name="bkStrokeColor" />
+        <attr name="bkStrokeColorSelected" />
+        <attr name="bkStrokeColorPressed" />
+        <attr name="bkStrokeColorDisabled" />
+        <attr name="bkStrokeWidth" />
+        <attr name="bkStrokeDashWidth" />
+        <attr name="bkStrokeDashGap" />
+
+        <!-- corner -->
+        <attr name="bkCornerRadius" />
+        <attr name="bkCornerPosition" />
+
+        <!-- gradient -->
+        <attr name="bkGradientType" />
+        <attr name="bkGradientCenterX" />
+        <attr name="bkGradientCenterY" />
+        <attr name="bkGradientRadius" />
+        <attr name="bkGradientOrientation" />
+        <attr name="bkGradientColors" />
+        <attr name="bkGradientStartColor" />
+        <attr name="bkGradientCenterColor" />
+        <attr name="bkGradientEndColor" />
+
+        <!-- shadow -->
+        <attr name="bkShadowRadius" />
+        <attr name="bkShadowColor" />
+
+        <!-- shadow padding -->
+        <attr name="bkShadowPadding" />
+        <attr name="bkShadowPaddingLeft" />
+        <attr name="bkShadowPaddingTop" />
+        <attr name="bkShadowPaddingRight" />
+        <attr name="bkShadowPaddingBottom" />
+
+        <!-- content padding -->
+        <attr name="bkContentPadding" />
+        <attr name="bkContentPaddingLeft" />
+        <attr name="bkContentPaddingTop" />
+        <attr name="bkContentPaddingRight" />
+        <attr name="bkContentPaddingBottom" />
+
+        <!-- icon -->
+        <attr name="bkIcon" format="reference" />
+        <attr name="bkIconSize" format="dimension" />
+        <attr name="bkIconPadding" format="dimension" />
+        <attr name="bkIconTint" format="color" />
+        <attr name="bkIconTintMode">
+            <enum name="src_over" value="3" />
+            <enum name="src_in" value="5" />
+            <enum name="src_atop" value="9" />
+            <enum name="multiply" value="14" />
+            <enum name="screen" value="15" />
+            <enum name="add" value="16" />
+        </attr>
+        <attr name="bkIconGravity">
+            <enum name="start" value="0x1" />
+            <enum name="textStart" value="0x2" />
+            <enum name="end" value="0x3" />
+            <enum name="textEnd" value="0x4" />
+            <enum name="top" value="0x10" />
+            <enum name="textTop" value="0x20" />
+        </attr>
+
+    </declare-styleable>
+
+    <declare-styleable name="BKFrameLayout">
+
+        <!-- background color -->
+        <attr name="bkBackgroundColor" />
+        <attr name="bkBackgroundColorSelected" />
+        <attr name="bkBackgroundColorPressed" />
+        <attr name="bkBackgroundColorDisabled" />
+
+        <!-- stroke -->
+        <attr name="bkStrokeColor" />
+        <attr name="bkStrokeColorSelected" />
+        <attr name="bkStrokeColorPressed" />
+        <attr name="bkStrokeColorDisabled" />
+        <attr name="bkStrokeWidth" />
+        <attr name="bkStrokeDashWidth" />
+        <attr name="bkStrokeDashGap" />
+
+        <!-- corner -->
+        <attr name="bkCornerRadius" />
+        <attr name="bkCornerPosition" />
+
+        <!-- gradient -->
+        <attr name="bkGradientType" />
+        <attr name="bkGradientCenterX" />
+        <attr name="bkGradientCenterY" />
+        <attr name="bkGradientRadius" />
+        <attr name="bkGradientOrientation" />
+        <attr name="bkGradientColors" />
+        <attr name="bkGradientStartColor" />
+        <attr name="bkGradientCenterColor" />
+        <attr name="bkGradientEndColor" />
+
+        <!-- shadow -->
+        <attr name="bkShadowRadius" />
+        <attr name="bkShadowColor" />
+
+        <!-- shadow padding -->
+        <attr name="bkShadowPadding" />
+        <attr name="bkShadowPaddingLeft" />
+        <attr name="bkShadowPaddingTop" />
+        <attr name="bkShadowPaddingRight" />
+        <attr name="bkShadowPaddingBottom" />
+
+        <!-- content padding -->
+        <attr name="bkContentPadding" />
+        <attr name="bkContentPaddingLeft" />
+        <attr name="bkContentPaddingTop" />
+        <attr name="bkContentPaddingRight" />
+        <attr name="bkContentPaddingBottom" />
+
+    </declare-styleable>
+
+    <declare-styleable name="BKLinearLayout">
+
+        <!-- background color -->
+        <attr name="bkBackgroundColor" />
+        <attr name="bkBackgroundColorSelected" />
+        <attr name="bkBackgroundColorPressed" />
+        <attr name="bkBackgroundColorDisabled" />
+
+        <!-- stroke -->
+        <attr name="bkStrokeColor" />
+        <attr name="bkStrokeColorSelected" />
+        <attr name="bkStrokeColorPressed" />
+        <attr name="bkStrokeColorDisabled" />
+        <attr name="bkStrokeWidth" />
+        <attr name="bkStrokeDashWidth" />
+        <attr name="bkStrokeDashGap" />
+
+        <!-- corner -->
+        <attr name="bkCornerRadius" />
+        <attr name="bkCornerPosition" />
+
+        <!-- gradient -->
+        <attr name="bkGradientType" />
+        <attr name="bkGradientCenterX" />
+        <attr name="bkGradientCenterY" />
+        <attr name="bkGradientRadius" />
+        <attr name="bkGradientOrientation" />
+        <attr name="bkGradientColors" />
+        <attr name="bkGradientStartColor" />
+        <attr name="bkGradientCenterColor" />
+        <attr name="bkGradientEndColor" />
+
+        <!-- shadow -->
+        <attr name="bkShadowRadius" />
+        <attr name="bkShadowColor" />
+
+        <!-- shadow padding -->
+        <attr name="bkShadowPadding" />
+        <attr name="bkShadowPaddingLeft" />
+        <attr name="bkShadowPaddingTop" />
+        <attr name="bkShadowPaddingRight" />
+        <attr name="bkShadowPaddingBottom" />
+
+        <!-- content padding -->
+        <attr name="bkContentPadding" />
+        <attr name="bkContentPaddingLeft" />
+        <attr name="bkContentPaddingTop" />
+        <attr name="bkContentPaddingRight" />
+        <attr name="bkContentPaddingBottom" />
+
+    </declare-styleable>
+
+</resources>

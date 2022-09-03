@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="horizontal"
+    tools:parentTag="android.widget.LinearLayout">
+
+
+    <me.reezy.cosmo.bk.BKTextView
+        android:id="@+id/minus"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#DEDEDE"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="-"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:bkCornerRadius="5dp"
+        app:bkStrokeColor="@color/black"
+        app:bkStrokeColorSelected="#ff9900"
+        app:bkStrokeWidth="1dp" />
+
+    <TextView
+        android:id="@+id/value"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:minWidth="30dp"
+        android:paddingHorizontal="5dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="-2dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="11dp"
+        app:bkStrokeColor="@color/black"
+        app:bkStrokeColorSelected="#ff9900"
+        app:bkStrokeWidth="1dp" />
+    <me.reezy.cosmo.bk.BKTextView
+        android:id="@+id/plus"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#DEDEDE"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="+"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:bkCornerRadius="5dp"
+        app:bkStrokeColor="@color/black"
+        app:bkStrokeColorSelected="#ff9900"
+        app:bkStrokeWidth="1dp" />
+
+</merge>

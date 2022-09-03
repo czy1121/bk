@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:text="阴影颜色"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/lyt_shadow_color"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="10dp">
+
+        <me.reezy.cosmo.bk.BKTextView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:background="#DEDEDE"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="无"
+            android:textColor="@color/black"
+            android:textSize="11dp"
+            app:bkCornerRadius="auto"
+            app:bkStrokeColor="@color/black"
+            app:bkStrokeColorSelected="#ff9900"
+            app:bkStrokeWidth="2dp" />
+
+        <me.reezy.cosmo.bk.BKTextView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:background="#DEDEDE"
+            android:clickable="true"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="11dp"
+            app:bkBackgroundColor="@color/teal_200"
+            app:bkCornerRadius="auto"
+            app:bkStrokeColor="@color/black"
+            app:bkStrokeColorSelected="#ff9900"
+            app:bkStrokeWidth="2dp" />
+
+        <me.reezy.cosmo.bk.BKTextView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:background="#DEDEDE"
+            android:clickable="true"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="11dp"
+            app:bkBackgroundColor="@color/purple_200"
+            app:bkCornerRadius="auto"
+            app:bkStrokeColor="@color/black"
+            app:bkStrokeColorSelected="#ff9900"
+            app:bkStrokeWidth="2dp" />
+
+        <me.reezy.cosmo.bk.BKTextView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:background="#DEDEDE"
+            android:clickable="true"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="11dp"
+            app:bkBackgroundColor="@android:color/holo_red_light"
+            app:bkCornerRadius="auto"
+            app:bkStrokeColor="@color/black"
+            app:bkStrokeColorSelected="#ff9900"
+            app:bkStrokeWidth="2dp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:text="阴影半径"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/lyt_shadow_radius"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="10dp">
+
+        <me.reezy.cosmo.bk.BKTextView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:background="#DEDEDE"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="0dp"
+            android:textColor="@color/black"
+            android:textSize="11dp"
+            app:bkCornerRadius="auto"
+            app:bkStrokeColor="@color/black"
+            app:bkStrokeColorSelected="#ff9900"
+            app:bkStrokeWidth="2dp" />
+
+        <me.reezy.cosmo.bk.BKTextView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:background="#DEDEDE"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="5dp"
+            android:textColor="@color/black"
+            android:textSize="11dp"
+            app:bkCornerRadius="auto"
+            app:bkStrokeColor="@color/black"
+            app:bkStrokeColorSelected="#ff9900"
+            app:bkStrokeWidth="2dp" />
+
+        <me.reezy.cosmo.bk.BKTextView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:background="#DEDEDE"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="10dp"
+            android:textColor="@color/black"
+            android:textSize="11dp"
+            app:bkCornerRadius="auto"
+            app:bkStrokeColor="@color/black"
+            app:bkStrokeColorSelected="#ff9900"
+            app:bkStrokeWidth="2dp" />
+
+        <me.reezy.cosmo.bk.BKTextView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:background="#DEDEDE"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="20dp"
+            android:textColor="@color/black"
+            android:textSize="11dp"
+            app:bkCornerRadius="auto"
+            app:bkStrokeColor="@color/black"
+            app:bkStrokeColorSelected="#ff9900"
+            app:bkStrokeWidth="2dp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:text="阴影边距(容纳阴影的空间)"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/lyt_shadow_padding"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="10dp">
+
+        <me.reezy.cosmo.bk.BKTextView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:background="#DEDEDE"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="0dp"
+            android:textColor="@color/black"
+            android:textSize="11dp"
+            app:bkCornerRadius="auto"
+            app:bkStrokeColor="@color/black"
+            app:bkStrokeColorSelected="#ff9900"
+            app:bkStrokeWidth="2dp" />
+
+        <me.reezy.cosmo.bk.BKTextView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:background="#DEDEDE"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="5dp"
+            android:textColor="@color/black"
+            android:textSize="11dp"
+            app:bkCornerRadius="auto"
+            app:bkStrokeColor="@color/black"
+            app:bkStrokeColorSelected="#ff9900"
+            app:bkStrokeWidth="2dp" />
+
+        <me.reezy.cosmo.bk.BKTextView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:background="#DEDEDE"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="10dp"
+            android:textColor="@color/black"
+            android:textSize="11dp"
+            app:bkCornerRadius="auto"
+            app:bkStrokeColor="@color/black"
+            app:bkStrokeColorSelected="#ff9900"
+            app:bkStrokeWidth="2dp" />
+
+        <me.reezy.cosmo.bk.BKTextView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:background="#DEDEDE"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="20dp"
+            android:textColor="@color/black"
+            android:textSize="11dp"
+            app:bkCornerRadius="auto"
+            app:bkStrokeColor="@color/black"
+            app:bkStrokeColorSelected="#ff9900"
+            app:bkStrokeWidth="2dp" />
+    </LinearLayout>
+</LinearLayout>

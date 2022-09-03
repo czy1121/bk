@@ -1,0 +1,9 @@
+
+apply from: "$buildGradlePath/build-library-demo.gradle"
+
+dependencies {
+
+    implementation project(":bk")
+
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+}

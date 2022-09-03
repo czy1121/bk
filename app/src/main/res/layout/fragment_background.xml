@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_selected"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:text="选中" />
+
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_disabled"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:text="禁用" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:text="背景色"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/picker_background"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="10dp">
+
+        <me.reezy.cosmo.bk.BKTextView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:background="#DEDEDE"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="无"
+            android:textColor="@color/black"
+            android:textSize="11dp"
+            app:bkCornerRadius="auto"
+            app:bkStrokeColor="@color/black"
+            app:bkStrokeColorSelected="#ff9900"
+            app:bkStrokeWidth="2dp" />
+
+        <me.reezy.cosmo.bk.BKTextView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:background="#DEDEDE"
+            android:clickable="true"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="11dp"
+            app:bkBackgroundColor="@color/teal_200"
+            app:bkCornerRadius="auto"
+            app:bkStrokeColor="@color/black"
+            app:bkStrokeColorSelected="#ff9900"
+            app:bkStrokeWidth="2dp" />
+
+        <me.reezy.cosmo.bk.BKTextView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:background="#DEDEDE"
+            android:clickable="true"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="11dp"
+            app:bkBackgroundColor="@color/purple_200"
+            app:bkCornerRadius="auto"
+            app:bkStrokeColor="@color/black"
+            app:bkStrokeColorSelected="#ff9900"
+            app:bkStrokeWidth="2dp" />
+
+        <me.reezy.cosmo.bk.BKLinearLayout
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:bkCornerRadius="auto"
+            app:bkStrokeColor="@color/black"
+            app:bkStrokeColorSelected="#ff9900"
+            app:bkStrokeWidth="2dp">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/teal_200" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/teal_700" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/purple_200" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#80000000" />
+
+        </me.reezy.cosmo.bk.BKLinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
