@@ -1,6 +1,6 @@
 # bk
 
-BKDrawable 可自定义 背景色/渐变/圆角/阴影/描边，用于 BKFrameLayout/BKLinearLayout/BKTextView
+BKDrawable/BKFrameLayout/BKLinearLayout/BKTextView 可自定义 背景色/渐变/圆角/阴影/描边
 
 - 支持 背景色[正常/选中/按下/禁用]
 - 支持 渐变[类型/半径/方向/中心点XY坐标(0.0~1.0)/颜色(开始-中心-结束)]
