@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:orientation="vertical"
+    android:background="@color/white"
     android:padding="20dp">
 
 
@@ -25,7 +26,7 @@
         android:layout_marginBottom="10dp">
 
         <me.reezy.cosmo.bk.BKTextView
-            android:layout_width="70dp"
+            android:layout_width="60dp"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:layout_marginEnd="10dp"
@@ -41,7 +42,7 @@
             app:bkStrokeWidth="2dp" />
 
         <me.reezy.cosmo.bk.BKTextView
-            android:layout_width="70dp"
+            android:layout_width="60dp"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:layout_marginEnd="10dp"
@@ -57,7 +58,7 @@
             app:bkStrokeWidth="2dp" />
 
         <me.reezy.cosmo.bk.BKTextView
-            android:layout_width="70dp"
+            android:layout_width="60dp"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:layout_marginEnd="10dp"
@@ -73,7 +74,7 @@
             app:bkStrokeWidth="2dp" />
 
         <me.reezy.cosmo.bk.BKTextView
-            android:layout_width="70dp"
+            android:layout_width="60dp"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:layout_marginEnd="10dp"
@@ -83,6 +84,22 @@
             android:textColor="@color/black"
             android:textSize="11dp"
             app:bkBackgroundColor="@android:color/holo_red_light"
+            app:bkCornerRadius="auto"
+            app:bkStrokeColor="@color/black"
+            app:bkStrokeColorSelected="#ff9900"
+            app:bkStrokeWidth="2dp" />
+
+        <me.reezy.cosmo.bk.BKTextView
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:background="#DEDEDE"
+            android:clickable="true"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="11dp"
+            app:bkBackgroundColor="#14AFAFBC"
             app:bkCornerRadius="auto"
             app:bkStrokeColor="@color/black"
             app:bkStrokeColorSelected="#ff9900"
@@ -247,4 +264,50 @@
             app:bkStrokeColorSelected="#ff9900"
             app:bkStrokeWidth="2dp" />
     </LinearLayout>
+
+
+    <me.reezy.cosmo.bk.BKTextView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="10dp"
+        android:background="#DEDEDE"
+        android:gravity="center"
+        android:textColor="@color/black"
+        app:bkBackgroundColor="@color/white"
+        app:bkCornerRadius="12dp"
+        app:bkStrokeColor="@color/white"
+        app:bkShadowPadding="20dp"
+        app:bkShadowColor="#14AFAFBC"
+        app:bkShadowRadius="20dp"/>
+
+    <me.reezy.cosmo.bk.BKTextView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="10dp"
+        android:background="#DEDEDE"
+        android:gravity="center"
+        android:textColor="@color/black"
+        app:bkBackgroundColor="@color/white"
+        app:bkCornerRadius="12dp"
+        app:bkStrokeColor="@color/white"
+        app:bkShadowPadding="20dp"
+        app:bkShadowColor="@color/teal_200"
+        app:bkShadowRadius="20dp"/>
+
+    <me.reezy.cosmo.bk.BKTextView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="10dp"
+        android:background="#DEDEDE"
+        android:gravity="center"
+        android:textColor="@color/black"
+        app:bkBackgroundColor="@color/white"
+        app:bkCornerRadius="12dp"
+        app:bkStrokeColor="@color/white"
+        app:bkShadowPadding="20dp"
+        app:bkShadowColor="@color/purple_200"
+        app:bkShadowRadius="20dp"/>
 </LinearLayout>

@@ -21,7 +21,9 @@ class ShadowFragment() : Fragment(R.layout.fragment_shadow) {
         val teal200 = resources.getColor(R.color.teal_200, requireContext().theme)
         val purple200 = resources.getColor(R.color.purple_200, requireContext().theme)
         val red = resources.getColor(android.R.color.holo_red_light, requireContext().theme)
-        val values = arrayOf(Color.TRANSPARENT, teal200, purple200, red)
+        val shadow = 0x14AFAFBC
+
+        val values = arrayOf(Color.TRANSPARENT, teal200, purple200, red, shadow)
         OptionPickerHelper(binding.lytShadowColor, values)
     }
 
@@ -39,7 +41,10 @@ class ShadowFragment() : Fragment(R.layout.fragment_shadow) {
 
         spShadowColor.value = Color.TRANSPARENT
         spShadowColor.onChanged {
+
             bkTextView.bk.shadowColor = it
+            bkTextView.bk.invalidateSelf()
+            bkTextView.invalidate()
         }
 
         spShadowRadius.value = 0f

@@ -11,6 +11,7 @@ import androidx.core.graphics.ColorUtils
 import me.reezy.cosmo.R
 import java.util.*
 import kotlin.math.hypot
+import kotlin.math.max
 import kotlin.math.min
 
 
@@ -111,7 +112,10 @@ class BKDrawable(context: Context, attrs: AttributeSet? = null) : Drawable() {
         mStrokeDashGap = a.getDimension(R.styleable.Background_bkStrokeDashGap, 0f)
 
         // 阴影
-        mShadowRenderer.shadowColor = a.getColor(R.styleable.Background_bkShadowColor, Color.TRANSPARENT)
+        mShadowRenderer.isAuto = !a.hasValue(R.styleable.Background_bkShadowColor)
+        if (!mShadowRenderer.isAuto) {
+            mShadowRenderer.shadowColor = a.getColor(R.styleable.Background_bkShadowColor, Color.TRANSPARENT)
+        }
         mShadowRenderer.shadowRadius = a.getDimension(R.styleable.Background_bkShadowRadius, 0f)
 
         val shadowPadding = a.getDimensionPixelSize(R.styleable.Background_bkShadowPadding, mShadowRenderer.shadowRadius.toInt())
@@ -245,6 +249,7 @@ class BKDrawable(context: Context, attrs: AttributeSet? = null) : Drawable() {
         set(value) {
             if (mShadowRenderer.shadowColor == value) return
             mShadowRenderer.shadowColor = value
+            mShadowRenderer.isAuto = value == Color.TRANSPARENT
             mShadowRenderer.update()
             invalidateSelf()
         }
@@ -402,7 +407,7 @@ class BKDrawable(context: Context, attrs: AttributeSet? = null) : Drawable() {
     @Deprecated("Deprecated in Java")
     override fun getOpacity(): Int = if (mAlpha == 255) PixelFormat.OPAQUE else PixelFormat.TRANSLUCENT
 
-    override fun onStateChange(stateSet: IntArray?): Boolean {
+    override fun onStateChange(stateSet: IntArray): Boolean {
         var invalidateSelf = false
         mBackgroundColors?.let {
             val newColor = it.getColorForState(stateSet, it.defaultColor)
@@ -663,19 +668,20 @@ class BKDrawable(context: Context, attrs: AttributeSet? = null) : Drawable() {
 
         private var shadowStartColor = 0
         private var shadowMiddleColor = 0
-        private var shadowEndColor = 0
 
+
+        var shadowRadius: Float = 0f
 
         var isAuto: Boolean = true
-        var shadowRadius: Float = 0f
         var shadowColor: Int = Color.TRANSPARENT
         var autoColor: Int = Color.TRANSPARENT
 
         fun update() {
             val value = if (isAuto) autoColor else shadowColor
-            shadowStartColor = ColorUtils.setAlphaComponent(value, COLOR_ALPHA_START)
-            shadowMiddleColor = ColorUtils.setAlphaComponent(value, COLOR_ALPHA_MIDDLE)
-            shadowEndColor = ColorUtils.setAlphaComponent(value, COLOR_ALPHA_END)
+            val alpha = Color.alpha(value)
+            val start = min(alpha, COLOR_ALPHA_START)
+            shadowStartColor = ColorUtils.setAlphaComponent(value, start)
+            shadowMiddleColor = ColorUtils.setAlphaComponent(value, (0.3f * start).toInt()) // min(alpha, COLOR_ALPHA_MIDDLE)
         }
 
         fun draw(canvas: Canvas, b: RectF, tl: Float, tr: Float, br: Float, bl: Float) {
@@ -696,7 +702,7 @@ class BKDrawable(context: Context, attrs: AttributeSet? = null) : Drawable() {
         private fun drawEdgeShadow(canvas: Canvas, x0: Float, y0: Float, x1: Float, y1: Float, elevation: Float, angle: Float) {
             val bounds = RectF(0f, -elevation, hypot(x1 - x0, y1 - y0), 0f)
 
-            edgeColors[0] = shadowEndColor
+            edgeColors[0] = 0
             edgeColors[1] = shadowMiddleColor
             edgeColors[2] = shadowStartColor
             edgeShadowPaint.shader = LinearGradient(bounds.left, bounds.top, bounds.left, bounds.bottom, edgeColors, edgePositions, Shader.TileMode.CLAMP)
@@ -716,7 +722,7 @@ class BKDrawable(context: Context, attrs: AttributeSet? = null) : Drawable() {
             cornerColors[1] = 0
             cornerColors[2] = shadowStartColor
             cornerColors[3] = shadowMiddleColor
-            cornerColors[4] = shadowEndColor
+            cornerColors[4] = 0
             val startRatio = 1f - elevation / radius
             val middleRatio = startRatio + (1f - startRatio) / 2f
             cornerPositions[1] = startRatio
@@ -732,7 +738,6 @@ class BKDrawable(context: Context, attrs: AttributeSet? = null) : Drawable() {
         companion object {
             private const val COLOR_ALPHA_START = 0x44
             private const val COLOR_ALPHA_MIDDLE = 0x14
-            private const val COLOR_ALPHA_END = 0
 
             private val edgeColors = IntArray(3)
             private val edgePositions = floatArrayOf(0f, .5f, 1f)
