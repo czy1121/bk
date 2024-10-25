@@ -1,5 +1,7 @@
 # bk
 
+[Deprecated] 使用 https://github.com/czy1121/shapeable 替代
+
 BKDrawable/BKFrameLayout/BKLinearLayout/BKTextView 可自定义 背景色/渐变/圆角/阴影/描边
 
 - 支持 背景色[正常/选中/按下/禁用]
